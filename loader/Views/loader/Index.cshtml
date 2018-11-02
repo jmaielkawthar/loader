@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<h2>Welcome To spinning Loader</h2>
+
+<div class="col-md-12">
+    <div class="col-md-6 divr " style="height:500px;width:500px;background-color:gray">
+
+    </div>
+
+    <div  class="col-md-6 divr" style="height:500px;width:500px;background-color:antiquewhite">
+
+    </div>
+
+</div>
+<div  class="col-md-6 divr" style="height:100px;width:300px;background-color:antiquewhite">
+
+</div>
+
+
+<button type="button"  style="padding: 10px 60px;" >
+   
+         hello world
+        <div  class=" btnr"> </div>
+       
+</button>
+
+
+   
+
+
+<input type="submit" id="btnSubmit" value="Submit" />
+
+<script>
+
+    $("#btnSubmit").click(function () {
+
+     
+
+        $('.divr').html('<img class="divLoader" src = "/Content/load.gif" alt = "Loader" />');
+        $.ajax({
+            url: '/loader/Submit',
+            dataType: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: {},
+            beforeSend: function () {
+                $(".divLoader").show();
+
+            },
+            complete: function () {
+                $(".divLoader").hide();
+            },
+            success: function (data) {
+
+            },
+            error: function (xhr) {
+                alert('error');
+            }
+ 
+
+        })
+    });
+    $("#btnSubmit").click(function () {
+
+
+
+        $('.btnr').html('<img class="divLoader1" src = "/Content/load.gif" alt = "Loader" />');
+        $.ajax({
+            url: '/loader/Submit',
+            dataType: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: {},
+            beforeSend: function () {
+                $(".divLoader1").show();
+
+            },
+            complete: function () {
+                $(".divLoader1").hide();
+            },
+            success: function (data) {
+
+            },
+            error: function (xhr) {
+                alert('error');
+            }
+
+
+        })
+    });
+</script>
+<style>
+
+    .divr {
+        display: flex;
+    }
+
+    .divLoader {
+        width: 10%;
+        height: auto;
+        margin: auto;
+    }
+    .divLoader1 {
+        width: 30px;
+    }
+    .btnr {
+        position: absolute;
+        z-index: 999;
+        margin-left: 75px;
+        margin-top: -22px;
+    }
+   
+</style>
