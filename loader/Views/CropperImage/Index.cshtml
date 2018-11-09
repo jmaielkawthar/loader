@@ -7,16 +7,15 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <title>Cropper</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
- 
-   
-    <link href="~/Content/Cropper.css" rel="stylesheet" />
-    <link href="~/Content/main.css" rel="stylesheet" />
+
+    <link href="~/Content/cropper/cropper.css" rel="stylesheet" />
+    <link href="~/Content/cropper/main.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -253,7 +252,7 @@
                     </label>
                     <label class="btn btn-primary">
                         <input type="radio" class="sr-only" id="aspectRatio5" name="aspectRatio" value="968/800">
-                        <span  class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="aspectRatio: NaN">
+                        <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="aspectRatio: NaN">
                             Free1
                         </span>
                     </label>
@@ -312,13 +311,14 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/cropper/common.js"></script>
+    <script src="~/Content/cropper/cropper.js"></script>
+    <script src="~/Content/cropper/main.js"></script>
 
-    <script src="~/Content/common.js"></script>
-    <script src="~/Content/main.js"></script>
-    <script src="~/Content/Cropper.js"></script>
+
     <script>
 
-        $('#aspectRatio5').css({ width: '300' , height:'200 px'});
+        $('#aspectRatio5').css({ width: '300', height: '200 px' });
     </script>
 </body>
 </html>

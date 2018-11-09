@@ -214,6 +214,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\categories.jpg" />
+    <Content Include="Content\cropper\common.js" />
+    <Content Include="Content\cropper\cropper.css" />
+    <Content Include="Content\cropper\cropper.js" />
+    <Content Include="Content\cropper\main.css" />
+    <Content Include="Content\cropper\main.js" />
     <Content Include="Content\load.gif" />
     <Content Include="Content\loading.gif" />
     <Content Include="favicon.ico" />
