@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eStore | Comapny Name</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Sans+Pro:400,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
+    <link rel="stylesheet" href="/Content/Backend/style/main.css">
+    <link rel="stylesheet" href="/Content/font-awesome.css">
+    <meta name="theme-color" content="#fff">
+    <link rel="shortcut icon" type="image/x-icon" href="/Content/Backend/img/favicon/favicon.ico">
+
+
+
+</head>
+
+
+
+<body>
+    <main>
+        <div class="login-bg position-fixed container-fluid"></div>
+        <div class="login_wrapper login-modal row">
+
+            <div class="login-modal__box col-12 rounded" tabindex="-1" role="dialog">
+
+
+
+                <img src="/Content/Backend/img/ui/logo.svg" class="login-modal__logo logo" alt="Logo">
+
+
+                <div class="login-modal__dialog m-0 select2-modal-dialog" role="document">
+                    <div class="login-modal__content select2-modal-content border-0">
+
+
+
+                        <div class="animate form login_form">
+
+                            <section class="login_content">
+
+
+
+
+
+                                <form action="/Account/Login" class="form-horizontal login-modal__body select2-modal-body px-5 pb-0" method="post" role="form">
+                                    <input name="__RequestVerificationToken" type="hidden" value="VQjKEJs9hbNESrwyY4T6qCXpEKGE5tacijhuHu-k8EwCJdz6r-XbGWEoI4KgEyrbHvGb_TtggW4liDirqaB3LVNqXazJR3Wi0G1Qng8Updge9icHulSOz6YPqyPf2OsizlWkjTFzm7ghzWxthqqY_Q2" />                                                <div class="login-modal__header modal-header align-items-end">
+                                        <h5 class="login-modal__title modal-title">Login into your account</h5>
+                                    </div>
+                                    <div class="form-item-valid form-item-valid--success form-group">
+
+
+                                        <label class='' for='Email'>Email</label>
+                                        <input class='form-control' data-val-email='The Email field is not a valid e-mail address.' data-val-email='The field is not a valid e-mail address.' data-val-required='Email field is required.' data-val='true' id='Email' name='Email' type='text' value=''><span class='field-validation-valid text-danger' data-valmsg-for='Email' data-valmsg-replace='true'></span>
+
+                                        <div class="required-alert alert-primary" role="alert">
+                                            <span class="required-alert__ico"></span>
+                                            <span class="required-alert__text">Success</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-item-valid form-item-valid--alert form-group">
+
+                                        <label class='' for='Password'>Password</label>
+                                        <input class='form-control' data-val-required='Password field is required.' data-val='true' ' data-val-length='The Password must be at least 6 characters long.' data-val-length-max='100' data-val-length-min='6' data-val-required='The Password field is required.' id='Password' name='Password' type='password' value=''><span class='field-validation-valid text-danger' data-valmsg-for='Password' data-valmsg-replace='true'></span>
+                                        <div class="required-alert alert-primary" role="alert">
+                                            <span class="required-alert__ico"></span>
+                                            <span class="required-alert__text">Alert message</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-item-valid form-group">
+                                        <label class="input-label" for="login_password2">Password</label>
+
+
+                                        <div class="required-alert alert-primary" role="alert">
+                                            <span class="required-alert__ico"></span>
+                                            <span class="required-alert__text">This is a required Field</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+
+
+
+
+
+                                        <div class="forgot-pass text-right px-5">
+                                            <a class="forgot-pass__link" href="">Forgot Password?</a>
+                                        </div>
+                                        <div class="login-modal__footer modal-footer border-0 d-flex justify-content-center px-5 pb-5 pt-4">
+                                            <button type="submit" class="btn btn-primary w-100"> Sign In</button>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>$.widget.bridge("uitooltip", $.ui.tooltip)</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ar.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.js"></script>
+        <script src="/Content/Backend/js/main.js"></script>
+        <script src="/Scripts/jquery-3.1.1.js"></script>
+
+        <script src="/Scripts/bootstrap.js"></script>
+        <script src="/Scripts/respond.js"></script>
+
+        <script src="/Scripts/jquery.validate.js"></script>
+        <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+
+
+
+    </main>
+
+
+
+    <footer></footer>
+
+</body>
+
+
+</html>

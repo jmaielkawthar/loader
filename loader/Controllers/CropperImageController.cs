@@ -21,5 +21,14 @@ namespace loader.Controllers
         {
             return View();
         }
+        public ActionResult cropping()
+        {
+            return View();
+        }
+        
+              public ActionResult fixedCrop()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,194 @@
+﻿
+
+
+
+
+
+    <link href="/Content/slides/main.css" rel="stylesheet" />
+    <link href="/Content/slides/slick.css" rel="stylesheet" />
+    <link href="/Content/slides/magnific-popup.min.css" rel="stylesheet" />
+
+    <div class="container body-content">
+
+    
+            <div class="main-preview--carousel-wrapp">
+                <!-- big carousel -->
+                <div class="carousel-big ">
+                    <div class="item">
+
+                        <a href="/Content/images-slide/large/img1.jpg"> <img src="/Content/images-slide/large/img1.jpg" class=" large img-fluid"> </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img2.jpg"> <img src="/Content/images-slide/large/img2.jpg" class="large img-fluid"> </a>
+                   
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img3.png"> <img src="/Content/images-slide/large/img3.png" class="large img-fluid"> </a>
+                       
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img4.jpg"> <img src="/Content/images-slide/large/img4.jpg" class="large img-fluid"> </a>
+                      
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img5.jpg"> <img src="/Content/images-slide/large/img5.jpg" class="large img-fluid"> </a>
+                    
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img6.jpg"> <img src="/Content/images-slide/large/img6.jpg" class="large img-fluid"> </a>
+                     
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img7.png"> <img src="/Content/images-slide/large/img7.png" class="large img-fluid"> </a>
+                   
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img8.jpg"> <img src="/Content/images-slide/large/img8.jpg" class="large img-fluid"> </a>
+                    
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img99.jpg"> <img src="/Content/images-slide/large/img99.jpg" class="large img-fluid"> </a>
+                    
+                    </div>
+                    <div class="item">
+                        <a href="/Content/images-slide/large/img10.png"> <img src="/Content/images-slide/large/img10.png" class="large img-fluid"> </a>
+                   
+                    </div>
+                </div>
+                <!-- carousel thumbs -->
+                <div class="carousel-thumbs  ">
+
+                    <div class="item"> <img src="/Content/images-slide/img1.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img2.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img3.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img4.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img5.jpg" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img6.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img7.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img8.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img9.png" class="small img-fluid rounded"> </div>
+                    <div class="item"> <img src="/Content/images-slide/img10.png" class="small img-fluid rounded"> </div>
+                </div>
+           
+
+            </div>
+        </div>
+ 
+
+
+
+
+
+    <script src="/Content/slides/Plugins.min.js"></script>
+
+    @*<script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: true,
+            focusOnSelect: true
+        });
+
+        $('a[data-slide]').click(function (e) {
+            e.preventDefault();
+            var slideno = $(this).data('slide');
+            $('.slider-nav').slick('slickGoTo', slideno - 1);
+        });
+    </script>*@
+
+    <script>
+        if (jQuery('.main-preview--carousel-wrapp').width() > 0) {
+            jQuery('.carousel-big').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                infinite: false,
+                arrows: false,
+                asNavFor: '.carousel-thumbs',
+            });
+            jQuery('.carousel-thumbs').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.carousel-big',
+                arrows: true,
+                focusOnSelect: true,
+                infinite: false,
+                prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>',
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 5,
+                        }
+                    },
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            slidesToShow: 4,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    }
+                ]
+            });
+
+
+            var thumbs = jQuery('.carousel-thumbs .slick-slide').length - 1;
+            jQuery('.carousel-thumbs .slick-prev').hide();
+            jQuery('.carousel-thumbs').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                if (currentSlide >= 0) {
+                    jQuery('.carousel-thumbs .slick-prev').show();
+                } if (currentSlide <= 0) {
+                    jQuery('.carousel-thumbs .slick-prev').hide();
+                } if (currentSlide == thumbs) {
+                    jQuery('.carousel-thumbs .slick-next').hide();
+                } if (currentSlide < thumbs) {
+                    jQuery('.carousel-thumbs .slick-next').show();
+                }
+            });
+
+            //magnific popup
+            jQuery('.carousel-big').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                closeOnContentClick: false,
+                closeBtnInside: false,
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+                image: {
+                    verticalFit: true,
+                },
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300, // don't foget to change the duration also in CSS
+                    opener: function (element) {
+                        return element.find('img');
+                    }
+                }
+
+            });
+        }
+
+
+    </script>
+
+
+    <script src="~/Content/js/index.js"></script>
+
+
+

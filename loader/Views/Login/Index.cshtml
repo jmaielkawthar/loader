@@ -1,0 +1,92 @@
+﻿@{ 
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Index";
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Up-rootsa Index Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Sans+Pro:400,600,700">
+  
+    <link href="~/Content/layout-version/layout2/select2.css" rel="stylesheet" />
+    <link href="~/Content/layout-version/layout2/main.css" rel="stylesheet" />
+    <meta name="theme-color" content="#fff">
+
+    <link rel="shortcut icon" type="image/x-icon" href="Backend/img/favicon/favicon.ico">
+</head>
+
+<body>
+
+    <main>
+        <div class="login-bg position-fixed container-fluid"></div>
+
+        <div class="login-modal row">
+            <div class="login-modal__box col-12 rounded" tabindex="-1" role="dialog" style="display: flex">
+                <img src="/Content/Backend/img/ui/logo.svg" class="login-modal__logo logo" alt="Logo">
+               
+                <div class="login-modal__dialog m-0 modal-dialog" role="document">
+                    <div class="login-modal__content modal-content border-0">
+                        <div class="login-modal__header modal-header align-items-end">
+                            <h5 class="login-modal__title modal-title">Login into your account</h5>
+                        </div>
+                        <form class="login-modal__body modal-body px-5 pb-0">
+
+                            <div class="form-item-valid form-item-valid--success form-group">
+                                <label class="input-label" for="login_email">Email</label>
+                                <input type="email" class="form-control input" id="login_email" placeholder="Please type your email" required>
+                                <div class="required-alert alert-primary" role="alert">
+                                    <span class="required-alert__ico"></span>
+                                    <span class="required-alert__text">Success</span>
+                                </div>
+                            </div>
+
+                            <div class="form-item-valid form-item-valid--alert form-group">
+                                <label class="input-label" for="login_password">Password</label>
+                                <input type="password" class="form-control input" id="login_password" placeholder="Please type your password" required>
+                                <div class="required-alert alert-primary" role="alert">
+                                    <span class="required-alert__ico"></span>
+                                    <span class="required-alert__text">Alert message</span>
+                                </div>
+                            </div>
+
+                            <div class="form-item-valid form-group">
+                                <label class="input-label" for="login_password2">Password</label>
+                                <input type="password" class="form-control input" id="login_password2" placeholder="Please type your password" required>
+                                <div class="required-alert alert-primary" role="alert">
+                                    <span class="required-alert__ico"></span>
+                                    <span class="required-alert__text">This is a required Field</span>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="forgot-pass text-right px-5">
+                            <a class="forgot-pass__link" href="">Forgot Password?</a>
+                        </div>
+
+                        <div class="login-modal__footer modal-footer border-0 d-flex justify-content-center px-5 pb-5 pt-4">
+                            <button type="button" class="btn btn-primary w-100">Sign In</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>$.widget.bridge("uitooltip", $.ui.tooltip)</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ar.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.js"></script>
+  
+    <script src="~/Content/Backend/js/main.js"></script>
+</body>
+</html>

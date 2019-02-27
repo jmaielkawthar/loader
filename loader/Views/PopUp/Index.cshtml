@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<style>
+    #backgroundOverlay {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+    }
+
+    #popup {
+        background-color: #fff;
+
+        width: 500px;
+        height: 200px;
+        position: absolute;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        z-index: 500;
+        display: none;
+    }
+</style>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div id="popup">
+    
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+</div>
+<div id="backgroundOverlay"></div>
+<input type="button" id="openOverlay" value="open popup">
+
+
+<script>
+    window.onload = function () {
+        var popup = document.getElementById('popup');
+        var overlay = document.getElementById('backgroundOverlay');
+        var openButton = document.getElementById('openOverlay');
+        document.onclick = function (e) {
+            if (e.target.id == 'backgroundOverlay') {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+            if (e.target === openButton) {
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            }
+        };
+    };
+</script>
+
+@*<div class="container"  >
+        <h2>Modal Example</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>*@

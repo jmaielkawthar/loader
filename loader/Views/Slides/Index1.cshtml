@@ -1,0 +1,259 @@
+﻿
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+<link href="/Content/slides/css/style.css" rel="stylesheet" />
+<link href="/Content/slides/main.css" rel="stylesheet" />
+<link href="/Content/slides/slick.css" rel="stylesheet" />
+<link href="/Content/slides/magnific-popup.min.css" rel="stylesheet" />
+<style>
+    .gallery {
+        padding-bottom: 140px;
+        margin: 20px 20px 40px;
+        background: #CCC;
+        position: relative;
+    }
+
+    .prev-next-button {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: white;
+        transform: translateY(-50%);
+    }
+
+    .previous {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .prev-next-button svg {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        width: 60%;
+        height: 60%;
+    }
+
+    .arrow {
+        fill: #333;
+    }
+
+
+    /* smaller, dark, rounded square */
+
+    .gallery2 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+        .gallery2 .prev-next-button {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 5px;
+        }
+
+            .gallery2 .prev-next-button.previous {
+                left: -20px;
+            }
+
+            .gallery2 .prev-next-button.next {
+                right: -20px;
+            }
+
+        .gallery2 .arrow {
+            fill: white;
+        }
+
+    /* large, just arrow */
+
+    .gallery3 {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+        .gallery3 .prev-next-button {
+            width: 80px;
+            height: 80px;
+            background: transparent;
+        }
+
+            .gallery3 .prev-next-button.previous {
+                left: -80px;
+            }
+
+            .gallery3 .prev-next-button.next {
+                right: -80px;
+            }
+
+        .gallery3 .arrow {
+            fill: #D00;
+        }
+</style>
+<div class="container body-content">
+
+    <div class="  main-preview--carousel-wrapp ">
+
+
+        <div class="slider slider-nav  carousel-thumbs   " style="float:left;width:120px; height:auto">
+            <div class="item"> <img src="~/Content/images-slide/large/img1.jpg" style="height:auto; width:102px; margin-top:15px"> </div>
+            <div class="item"> <img src="~/Content/images-slide/large/img2.jpg" style="height:auto; width:102px;margin-top:15px"></div>
+            <div class="item"> <img src="~/Content/images-slide/large/img3.png" style="height:auto; width:102px;margin-top:15px"> </div>
+            <div class="item"> <img src="~/Content/images-slide/large/img4.jpg" style="height:auto; width:102px;margin-top:15px"> </div>
+            <div class="item"> <img src="~/Content/images-slide/large/img5.jpg" style="height:auto; width:102px; margin-top:15px"> </div>
+        </div>
+        <div class="slider slider-for  carousel-big  " style="float:left; margin-right: 150px;width:500px; height:auto; padding:20px">
+            <div class="item"> <a href="/Content/images-slide/large/img1.jpg"> <img src="~/Content/images-slide/large/img1.jpg" style="height:auto; width:400px;"> </a></div>
+            <div class="item"><a href="~/Content/images-slide/large/img2.jpg"> <img src="~/Content/images-slide/large/img2.jpg" style="height:auto; width:400px;"> </a></div>
+            <div class="item"><a href="/Content/images-slide/large/img3.png"> <img src="~/Content/images-slide/large/img3.png" style="height:auto; width:400px;"> </a></div>
+            <div class="item"><a href="/Content/images-slide/large/img4.jpg"> <img src="~/Content/images-slide/large/img4.jpg" style="height:auto; width:400px;"> </a></div>
+            <div class="item"><a href="/Content/images-slide/large/img5.jpg"> <img src="~/Content/images-slide/large/img5.jpg" style="height:auto; width:400px;"> </a></div>
+        </div>
+
+
+    </div>
+
+</div>
+<div class="gallery gallery1">
+    <div class="prev-next-button previous">
+        <svg viewbox="0 0 100 100">
+            <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" transform=" translate(15,0)">
+        </svg>
+    </div>
+    <div class="prev-next-button next">
+        <svg viewbox="0 0 100 100">
+            <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z " transform="translate(85,100) rotate(180) ">
+        </svg>
+    </div>
+</div>
+<nav >
+    <a class="prev-image prev-next-button previous" href="">
+        <svg viewbox="0 0 100 100">
+            <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" transform=" translate(15,0)">
+        </svg>
+    </a>
+    <a class="next-image prev-next-button next" href="">
+        <svg viewbox="0 0 100 100">
+            <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z " transform="translate(85,100) rotate(180) ">
+        </svg>
+    </a>
+</nav>
+<script src="/Content/slides/Plugins.min.js"></script>
+
+<script>
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        focusOnSelect: true,
+        arrows: true,
+        vertical: true,
+        centerPadding: "10px",
+        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>',
+        nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>',
+    });
+
+    $('a[data-slide]').click(function (e) {
+        e.preventDefault();
+        var slideno = $(this).data('slide');
+        $('.slider-nav').slick('slickGoTo', slideno - 1);
+    });
+
+    if (jQuery('.main-preview--carousel-wrapp').width() > 0) {
+        jQuery('.carousel-big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            infinite: false,
+            arrows: false,
+            asNavFor: '.carousel-thumbs',
+        });
+        jQuery('.carousel-thumbs').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.carousel-big',
+            arrows: true,
+            focusOnSelect: true,
+            infinite: false,
+            prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>',
+            nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>',
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 5,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                }
+            ]
+        });
+
+        var thumbs = jQuery('.carousel-thumbs .slick-slide').length - 1;
+        jQuery('.carousel-thumbs .slick-prev').hide();
+        jQuery('.carousel-thumbs').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            if (currentSlide >= 0) {
+                jQuery('.carousel-thumbs .slick-prev').show();
+            } if (currentSlide <= 0) {
+                jQuery('.carousel-thumbs .slick-prev').hide();
+            } if (currentSlide == thumbs) {
+                jQuery('.carousel-thumbs .slick-next').hide();
+            } if (currentSlide < thumbs) {
+                jQuery('.carousel-thumbs .slick-next').show();
+            }
+        });
+
+        //magnific popup
+        jQuery('.carousel-big').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true,
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300, // don't foget to change the duration also in CSS
+                opener: function (element) {
+                    return element.find('img');
+                }
+            }
+
+        });
+    }
+
+</script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js'></script>
+
+
+<script src="~/Content/js/index.js"></script>
