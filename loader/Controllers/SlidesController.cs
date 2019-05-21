@@ -25,5 +25,9 @@ namespace loader.Controllers
         {
             return View();
         }
+        public ActionResult arrow()
+        {
+            return View();
+        }
     }
 }

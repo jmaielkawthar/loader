@@ -605,6 +605,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Slides\Index2.cshtml" />
     <Content Include="Views\Slides\Index3.cshtml" />
+    <Content Include="Views\CropperImage\Index2.cshtml" />
+    <Content Include="Views\Slides\arrow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

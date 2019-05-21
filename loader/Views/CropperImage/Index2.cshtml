@@ -1,0 +1,197 @@
+﻿@model List<BLL.SellerProductsImages>
+@{
+    ViewBag.Title = "_CropImage";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="~/Content/cropper/cropper.css" rel="stylesheet" />
+<link href="~/Content/cropper/main.css" rel="stylesheet" />
+<style>
+    @@media screen and (max-width: 600px) {
+        #maincontainer.container {
+            width: 100%;
+        }
+
+        div > .cropandadd {
+            max-width: 260px;
+            width: 100%;
+            margin: 5px 0;
+        }
+        /*#inputimage1.btn {
+            width: 100%;
+        }*/
+    }
+
+    @@media screen and (min-width: 1050px) {
+        #maincontainer.container {
+            width: 35%;
+        }
+    }
+
+    @@media screen and (max-width: 1050px) {
+        .cropandadd {
+            font-size: 12px !important;
+        }
+
+        #inputimage1.btn {
+            font-size: 12px !important;
+        }
+    }
+
+    .cropandadd {
+        -ms-transform: translate(-50%, -50%);
+        background-color: #cac4c4;
+        color: white;
+        font-size: 16px;
+        padding: 10px 24px;
+        border: none;
+        cursor: pointer;
+        height: 48px;
+        /*border-radius: 23px;*/
+        text-align: center;
+        outline: 0 !important;
+        font-weight: 500;
+    }
+
+    #inputimage1.btn {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 16px 24px;
+        border: none;
+        cursor: pointer;
+        height: 48px;
+        font-weight: 500;
+        border-radius: 0px;
+        text-align: center;
+    }
+
+    label.btn::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #DBB34A;
+        transition: width .5s;
+    }
+
+    label.btn:hover::after {
+        width: 100%;
+        transition: width .5s;
+    }
+
+    .loader1 {
+        border: 3px dashed #443E43;
+        border-radius: 50%;
+        border-top: 3px dashed #443E43;
+        width: 15px;
+        height: 15px;
+        -webkit-animation: spin 1s linear infinite; /* Safari */
+        animation: spin 1s linear infinite;
+        margin-top: 35px;
+        display: inline-block;
+        margin-right: 4px;
+    }
+    /* Safari */
+    @@-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @@keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<div class="">
+
+    <div>
+        <div class="col-md">
+            <div class="option__item drag-n-drop__thumb-wrapp">
+                <div class="row" style="min-height: 0px;padding: 0 0;">
+                    @*@foreach (var item in Model)
+                    {*@
+
+                        @*<div id="@item.ID" class="drag-n-drop-thumb-item thumb-item-uploaded">
+                            <img class="img-prev" src="/Home/LoadImages/@item.ID?type=SellerProductsImages" />
+                            <div class="img-cover">
+                                <button class="remove-img" type="button" title="Delete Image" onclick="Delete_exists('')">"Delete Image"<span></span><span></span></button>
+                            </div>
+                        </div>*@
+
+                    @*}*@
+                </div>
+            </div>
+            <!-- <h3>Demo:</h3> -->
+            <div class="img-container" style="border: 1px dashed #443E43;position:relative; background-image:url('/Content/BrandfullImages/upload1.png'); background-repeat:no-repeat;background-position:center">
+                <label class="btn" for="inputImage" id="inputimage1" title="Upload image file">
+                    <input type="file" class="sr-only" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                    +"Upload Photo"
+                </label>
+                <img id="image" src="" />
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12">
+        <div class="">
+            <div class="docs-buttons" style="text-align:center">
+                <label class="cropandadd" id="inputimage2" for="inputImage" title="Upload image file" hidden style="font-weight:inherit;background-color: #555;">
+                    <input type="file" class="sr-only" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                    + "Change Photo"
+                </label>
+                <button type="button" class="cropandadd" for="inputImage" id="btncropandadd" title="Crop and add title" data-method="getCroppedCanvas" data-option="{width 141, height 168}" disabled>
+                    +"Crop and add"
+                </button>
+            </div>
+        </div><!-- /.docs-buttons -->
+    </div>
+    <!-- /.result -->
+    <span id="imagesmessageshow" style="color:red"></span>
+
+    <div class="" style="margin-top:5px">
+        <table class="col-md-12 col-sm-12 col-xs-12" id="result" style="margin-top:10%"></table>
+    </div>
+</div>
+<style>
+    ._progressbar {
+        margin-top: 10px;
+        height: 5px;
+    }
+
+    .delete {
+        margin-top: 51%;
+    }
+
+    .imagename {
+        bottom: 42px;
+        position: absolute;
+        margin-left: 15px;
+    }
+</style>
+
+<!-- /.end results -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="~/Content/cropper/common.js"></script>
+<script src="~/Content/cropper/cropper.js"></script>
+<script src="~/Content/cropper/main.js"></script>
+<script src="~/Content/dist/cropper.js"></script>
