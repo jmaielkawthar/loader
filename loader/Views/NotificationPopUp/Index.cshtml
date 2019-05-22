@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+<link href="~/Content/PopUpNotification/css/jmylwq.css" rel="stylesheet" />
+<div class="row">
+    <div class="columns">
+        <h2>Dropdown Pane</h2>
+        <p>Dropdown panes are little happy sprites which can be revealed on click or hover.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="columns">
+        <button class="button" type="button" data-toggle="example-dropdown">Toggle Dropdown</button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown>
+            Just some junk that needs to be said. Or not. Your choice.
+        </div>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="~/Content/PopUpNotification/js/jmylwq.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+
