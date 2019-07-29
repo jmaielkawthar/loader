@@ -70,9 +70,9 @@
     });
     $("#btnSubmit").click(function () {
 
+      
 
-
-        $('.btnr').html('<img class="divLoader1" src = "/Content/load.gif" alt = "Loader" />');
+        $('.btnr').html('<img class="divLoader1" src="~/Content/load.gif" alt = "Loader" />');
         $.ajax({
             url: '/loader/Submit',
             dataType: "json",

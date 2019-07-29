@@ -356,7 +356,6 @@
     <Content Include="Content\package\js\src\tooltip.js" />
     <Content Include="Content\package\js\src\util.js" />
     <Content Include="Content\PopUpNotification\css\jmylwq.css" />
-    <Content Include="Content\PopUpNotification\css\style.css" />
     <Content Include="Content\PopUpNotification\js\index.js" />
     <Content Include="Content\PopUpNotification\js\jmylwq.js" />
     <Content Include="Content\received_1388769464589016 %281%29.jpeg" />
