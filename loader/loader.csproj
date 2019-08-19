@@ -204,6 +204,7 @@
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MenuSubMenuController.cs" />
     <Compile Include="Controllers\NotificationPopUpController.cs" />
     <Compile Include="Controllers\PopUpController.cs" />
     <Compile Include="Controllers\SlidesController.cs" />
@@ -612,6 +613,7 @@
     <Content Include="Views\CropperImage\Index2.cshtml" />
     <Content Include="Views\Slides\arrow.cshtml" />
     <Content Include="Views\NotificationPopUp\Index.cshtml" />
+    <Content Include="Views\MenuSubMenu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
